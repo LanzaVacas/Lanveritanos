@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardines Polinizadores - Fuentes y Contacto</title>
+    <link rel="stylesheet" href="estilo5.css">
+</head>
+<body>
+    <main>
+        <section id="fuentes">
+            <h2>Fuentes de Información</h2>
+            <p>A continuación se presentan las fuentes utilizadas para crear esta aplicación, así como recursos adicionales sobre jardines polinizadores:</p>
+            <ul>
+                <li><a href="https://example.com/guia-jardines" target="_blank">Guía Completa de Jardines Polinizadores</a></li>
+                <li><a href="https://example.com/plantas-nativas" target="_blank">Plantas Nativas y Polinizadores</a></li>
+                <li><a href="https://example.com/cuidado-polinizadores" target="_blank">Cuidados y Consejos para Atraer Polinizadores</a></li>
+                <li><a href="https://example.com/importancia-polinizadores" target="_blank">Importancia de los Polinizadores en el Ecosistema</a></li>
+            </ul>
+        </section>
+        <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si tienes dudas, comentarios o deseas unirte a nuestra comunidad, contáctanos a través del siguiente formulario:</p>
+    <form id="form-contacto" onsubmit="mostrarConfirmacion(event)">
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensaje-exito" style="display: none; color: green;">¡Gracias! Tu mensaje ha sido enviado con éxito.</p>
+</section>
+
+<script>
+    function mostrarConfirmacion(event) {
+        event.preventDefault();
+        const mensajeExito = document.getElementById("mensaje-exito");
+        mensajeExito.style.display = "block";
+    }
+</script>
+
+        <section id="alta-comunidad">
+            <h2>Únete a la Comunidad</h2>
+            <p>Si deseas recibir noticias y actualizaciones sobre jardines polinizadores, así como acceso a contenido exclusivo, regístrate en nuestra comunidad:</p>
+            <form action="#" method="post">
+                <label for="nombre-alta">Nombre Completo:</label>
+                <input type="text" id="nombre-alta" name="nombre-alta" required>
+
+                <label for="correo-alta">Correo Electrónico:</label>
+                <input type="email" id="correo-alta" name="correo-alta" required>
+
+                <button type="submit">Darse de Alta</button>
+            </form>
+        </section>
+        <section id="despedida">
+            <h2>¡Gracias por tu Visita!</h2>
+            <p>Esperamos que esta información te sea útil para crear y mantener tu propio jardín de polinizadores. Gracias por ser parte de esta iniciativa para proteger y fomentar la biodiversidad.</p>
+        </section>
+    </main>
+</body>
+</html>

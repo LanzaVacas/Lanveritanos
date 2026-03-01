@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Jardines de Polinizadores</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section>
+        <h1>Jardines de Polinizadores</h1>
+        <p id="bienvenida">Bienvenido</p>
+        <audio autoplay loop>
+            <source src="inomarl.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <form action="pag2.html" method="POST" onsubmit="mostrarBienvenida()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" name="enviar" value="Enviar">
+        </form>
+    </section>
+
+    <script>
+        function mostrarBienvenida() {
+            const nombre = document.getElementById("nombre").value;
+            const bienvenida = document.getElementById("bienvenida");
+            bienvenida.textContent = `¡Bienvenido, ${nombre}! Gracias por visitar Jardines de Polinizadores.`;
+        }
+    </script>
+</body>
+</html>

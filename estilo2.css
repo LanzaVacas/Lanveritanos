@@ -1,0 +1,64 @@
+body {
+    font-family: 'MineCrafter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url('https://i.pinimg.com/originals/f7/19/e0/f719e07037342976e6b651acae9035e5.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+section {
+    background-size: 100% 100%;
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczN3ito2VbaIeqMQpFTvCEFJ2rspMKnXqwUFsDIrxWscbXt1zeth_-XT8KgucO0lljr8Ujh4jYsgXOkKrKTJs0D2j3nLuk4qaV-hzDUy_MkWzA-ynyQOtwEtLIBS6XIkPdjBli2GST8RAEvqgruf7EBq0Q=w352-h332-s-no-gm?authuser=0');
+    margin: 50px auto;
+    padding: 50px;
+    width: 90%;
+    max-width: 800px;
+    opacity: 95%;
+}
+h1, h2 {
+    color: #4CAF50;
+    text-align: center;
+}
+p {
+    font-size: 1.1em;
+    text-align: center;
+}
+article {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 100%;
+}
+#galeria-imagenes {
+    margin: 50px auto;
+    padding: 5  0px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+#galeria-imagenes h2 {
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+#galeria-imagenes .imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+#galeria-imagenes img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantas Amigables - Jardines de Polinizadores</title>
+    <link rel="stylesheet" href="estilo3.css">
+</head>
+<body>
+    <section>
+        <h1>Plantas Nativas para Polinizadores</h1>
+        <p>Descubre plantas nativas que puedes cultivar para atraer polinizadores y contribuir al ecosistema.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Planta</th>
+                    <th>Polinizador</th>
+                    <th>Cuidado</th>
+                    <th>Riego</th>
+                    <th>Poda</th>
+                    <th>Fertilización</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-plantas"></tbody>
+        </table>
+    </section>
+
+    <script>
+        const plantas = [
+            {planta: "Lavanda", polinizador: "Abejas", cuidado: "Sol directo", riego: "Moderado", poda: "Ligera en primavera", fertilizacion: "Una vez al año"},
+            {planta: "Girasol", polinizador: "Abejas y mariposas", cuidado: "Sol directo", riego: "Alto en verano", poda: "No requiere", fertilizacion: "Mensual"},
+            {planta: "Salvia", polinizador: "Colibríes", cuidado: "Sol parcial", riego: "Bajo", poda: "Recorte después de floración", fertilizacion: "Ligero en primavera"},
+            {planta: "Caléndula", polinizador: "Mariposas", cuidado: "Sol directo", riego: "Moderado", poda: "Remover flores secas", fertilizacion: "Ligero en primavera"}
+        ];
+
+        const tablaPlantas = document.getElementById("tabla-plantas");
+
+        plantas.forEach(planta => {
+            const fila = document.createElement("tr");
+            Object.values(planta).forEach(valor => {
+                const celda = document.createElement("td");
+                celda.textContent = valor;
+                fila.appendChild(celda);
+            });
+            tablaPlantas.appendChild(fila);
+        });
+    </script>
+</body>
+</html>

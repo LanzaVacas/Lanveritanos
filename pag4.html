@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce Tu Polinizador - Jardines de Polinizadores</title>
+    <link rel="stylesheet" href="estilo4.css">
+</head>
+<body>
+    <section>
+        <h1>Conoce Tu Polinizador</h1>
+        <p>Selecciona una planta de la lista para conocer a su polinizador y cómo cuidar de ella adecuadamente.</p>
+
+        <form id="plant-form">
+            <label for="planta">Elige una planta:</label>
+              <select id="planta" name="planta">
+                <option value="lavanda">Lavanda</option>
+                <option value="girasol">Girasol</option>
+                <option value="jazmin">Jazmín</option>
+                <option value="calendula">Caléndula</option>
+                <option value="salvia">Salvia</option>
+                <option value="dalia">Dalia</option></select>
+            <button type="button" onclick="mostrarInformacion()">Ver Información</button>
+        </form>
+
+        <div id="info-polinizador" style="display: none;">
+            <h2>Información de la Planta y su Polinizador</h2>
+            <p id="resultado"></p>
+        </div>
+        <nav>
+            <a href="pag2.html">Página Principal</a>
+        </nav>
+    </section>
+
+    <script>
+        function mostrarInformacion() {
+            const planta = document.getElementById("planta").value;
+            const resultado = document.getElementById("resultado");
+            const infoPolinizador = document.getElementById("info-polinizador");
+
+            let info = "";
+
+            switch (planta) {
+                case "lavanda":
+                    info = "La lavanda atrae principalmente a las abejas. Necesita sol directo, riego moderado y una poda ligera en primavera.";
+                    break;
+                case "girasol":
+                    info = "El girasol es ideal para abejas y mariposas. Prefiere sol directo y riego constante durante su crecimiento.";
+                    break;
+                case "jazmin":
+                    info = "El jazmín atrae a polinizadores nocturnos como las polillas. Necesita riego frecuente y poda después de la floración.";
+                    break;
+                case "calendula":
+                    info = "La caléndula es una buena opción para abejas. Prefiere sol directo, riego regular y fertilización ligera.";
+                    break;
+                default:
+                    info = "Selecciona una planta para ver su información.";
+            }
+
+            resultado.textContent = info;
+            infoPolinizador.style.display = "block";
+        }
+    </script>
+</body>
+</html>
